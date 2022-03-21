@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Cantarell:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(to top left, #da816d, #9d5c6c);
+  color: #f2f2f2;
+  font-family: "Cantarell", sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 1.5rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: #f2f2f2;
+  color: #25242a;
+}
+
+form button {
+  cursor: pointer;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: #f2f2f2;
+  color: #da816d;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo li {
+  flex: 1;
+  transition: all 0.5s ease;
+}
+
+.trash-btn,
+.completed-btn {
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.fall {
+  transition: all 1s ease;
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+@media screen and (max-width: 470px) {
+  body {
+    height: 100%;
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
+  }
+  form input {
+    width: 80%;
+    margin: 0 0 0 5%;
+  }
+  form button {
+    width: 10%;
+    margin: 0 5% 0 0;
+    font-size: 1.5rem;
+    height: 52px;
+  }
+}
